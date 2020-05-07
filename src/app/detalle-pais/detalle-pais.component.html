@@ -1,0 +1,11 @@
+
+
+
+<div  *ngIf="detallePais" class="card" style="width: 18rem;">
+    <img [src]="this.detallePais.flag" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{detallePais.name}}</h5>
+      <p class="card-text">{{detallePais.capital}}</p>
+      <p class="card-text">{{detallePais.population}}</p>   
+    </div>
+  </div>

@@ -13,6 +13,7 @@ export class PaisesListadoComponent implements OnInit {
 
   paises: any;
   paisesListado;;
+  pais:any;
   constructor( private paisesService:PaisesService ) { }
 
   ngOnInit(): void {
@@ -23,5 +24,12 @@ export class PaisesListadoComponent implements OnInit {
     })
 
   }
+
+  enviarPais( event ){
+    this.pais = event;
+    console.log(this.pais);
+  }
+
+  
 
 }

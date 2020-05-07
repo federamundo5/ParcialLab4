@@ -1,23 +1,11 @@
 
-<app-actor-alta></app-actor-alta>
 
 
-<table class="table">
-    <thead class="thead-light">
-      <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
-        <th scope="col">Sexo</th>
-        <th scope="col">FechaNacimiento</th>
-        <th scope="col">Foto</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let pais of paisesListado" >
-        <th>{{pais.name}}</th>
-        <th>{{pais.capital}}</th>
-        <th>{{pais.population}}</th>
-        <td> <img [src]="pais.flag" width="80px" > </td>
-      </tr>
-    </tbody>
-  </table>
+
+<app-detalle-pais   [detallePais]="this.pais"> </app-detalle-pais>
+
+
+
+<app-tabla-paises (paisSeleccionado)="enviarPais($event)" [paises]="this.paisesListado" ></app-tabla-paises>
+
+

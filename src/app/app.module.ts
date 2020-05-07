@@ -16,7 +16,9 @@ import { Http } from '@angular/http';
 import { PaisesService } from './servicios/paises-service.service';
 import { MiHttpService } from './servicios/mihttp.service';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { DetallePaisComponent } from './detalle-pais/detalle-pais.component';
+import { TablaPaisesComponent } from './componentes/paises/tabla-paises/tabla-paises.component'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     ActorAltaComponent,
     ActorListadoComponent,
     PeliculaListadoComponent,
-    PaisesListadoComponent
+    PaisesListadoComponent,
+    DetallePaisComponent,
+    TablaPaisesComponent
   ],
   imports: [
     BrowserModule,
