@@ -14,4 +14,15 @@ export class DetallePaisComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  borrarPais(){
+
+    this.eliminar.emit( this.detallePais );
+    this.detallePais=null; 
+  
+  }
+
+
+
+  
 }
