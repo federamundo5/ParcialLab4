@@ -19,7 +19,6 @@ export class DetallePaisComponent implements OnInit {
 
     this.eliminar.emit( this.detallePais );
     this.detallePais=null; 
-  
   }
 
 
