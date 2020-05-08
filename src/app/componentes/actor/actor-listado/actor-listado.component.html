@@ -1,1 +1,21 @@
-<p>actor-listado works!</p>
+
+
+
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Populacion</th>
+        <th scope="col">Bandera</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let actor of actores" >
+        <th>{{actor.nombre}}</th>
+        <th>{{actor.apellido}}</th>
+        <th>{{actor.sexo}}</th>
+        <td> <img [src]="actor.foto" width="80px" > </td>
+      </tr>
+    </tbody>
+  </table>
