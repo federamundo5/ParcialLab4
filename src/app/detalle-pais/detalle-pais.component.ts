@@ -8,6 +8,7 @@ import { Component, OnInit ,Input,Output, EventEmitter} from '@angular/core';
 export class DetallePaisComponent implements OnInit {
   @Input() detallePais;
   @Output() eliminar = new EventEmitter();
+  @Output() seleccion = new EventEmitter();
 
   constructor() { }
 
@@ -20,6 +21,9 @@ export class DetallePaisComponent implements OnInit {
     this.eliminar.emit( this.detallePais );
     this.detallePais=null; 
   }
+
+
+  
 
 
 

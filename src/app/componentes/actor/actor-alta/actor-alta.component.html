@@ -22,7 +22,7 @@
       <input type="date" formControlName="FechaNacimiento">
 
       Pais:
-      <input type="date" formControlName="FechaNacimiento">
+      <input type="text" [(ngModel)]='paisstring' formControlName="FechaNacimiento">
   </form>
 
   <button type="submit" (click)="onSubmit(formulario.value)">Submit</button>
@@ -38,4 +38,4 @@
 <app-detalle-pais   [detallePais]="this.pais"> </app-detalle-pais>
 
 
-<app-tabla-paises [paises]="this.paisesListado" ></app-tabla-paises>
+<app-tabla-paises  (paisSeleccionado)="enviarPais($event)" [paises]="this.paisesListado" ></app-tabla-paises>

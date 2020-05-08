@@ -15,6 +15,7 @@ export class ActorAltaComponent implements OnInit {
   paises: any;
   paisesListado;;
   pais:any;
+  paisstring:string;
   formulario;
   actores: Actores[];
 
@@ -36,6 +37,8 @@ export class ActorAltaComponent implements OnInit {
 
   enviarPais( event ){
     this.pais = event;
+    this.paisstring = this.pais.name;
+  
     console.log(this.pais);
   }
   onSubmit(data) {
