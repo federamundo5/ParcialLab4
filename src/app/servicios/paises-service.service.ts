@@ -13,9 +13,8 @@ export class PaisesService {
 
     constructor( private httpClient:HttpClient) {
 
-      this.httpClient.get('https://restcountries.eu/rest/v2/region/americas').subscribe( (datos:any)=>{
-        datos.forEach(element => {
-          console.log(element);
+      this.httpClient.get('https://restcountries.eu/rest/v2/region/americas').subscribe( (data:any)=>{
+        data.forEach(element => {
           this.paises.push(element)
         });
       });

@@ -6,16 +6,18 @@
       <tr>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
-        <th scope="col">Populacion</th>
-        <th scope="col">Bandera</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">FechaNacimiento</th>
+        <th scope="col">Foto</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let actor of actores" >
-        <th>{{actor.nombre}}</th>
-        <th>{{actor.apellido}}</th>
-        <th>{{actor.sexo}}</th>
-        <td> <img [src]="actor.foto" width="80px" > </td>
+        <th>{{actor.Nombre}}</th>
+        <th>{{actor.Apellido}}</th>
+        <th>{{actor.Sexo}}</th>
+        <th>{{actor.FechaNacimiento}}</th>
+        <td> <img [src]="actor.Foto" width="80px" > </td>
       </tr>
     </tbody>
   </table>

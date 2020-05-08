@@ -18,6 +18,7 @@ export class ActorAltaComponent implements OnInit {
   paisstring:string;
   formulario;
   actores: Actores[];
+  actor: Actores;
 
   constructor(private paisesService:PaisesService, private formBuilder: FormBuilder, private actorService: ActoresServiceService) { }
 
@@ -42,7 +43,9 @@ export class ActorAltaComponent implements OnInit {
     console.log(this.pais);
   }
   onSubmit(data) {
-    this.actorService.nuevoActor(this.formulario.value);
+    let Actor;
+    Actor = new Actores(2,this.formulario.value.Nombre,this.formulario.value.Apellido,this.formulario.value.Sexo,this.formulario.value.FechaNacimiento,"",this.formulario.value.Pais);
+    this.actorService.nuevoActor(Actor);
   }
 
 }
